@@ -1,0 +1,3 @@
+com.migu.CacheTest#testCache 首先使用RedisTemplate查询redis缓存是否有数据，如果没有，再调用Mybatis的Mappeer，查询mysql数据库。
+com.migu.CacheService#query 展示了使用缓存经常会犯的错误：由于redis缓存失效，同时有多个tomcat线程调用com.migu.CacheService#query查询mysql数据库，
+把mysql数据库压垮。
